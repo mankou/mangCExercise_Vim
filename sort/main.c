@@ -3,7 +3,7 @@
 main()
 {
 	void myPrint(void);
-	printf("hello world\n");
-	myPrint();
+	print("hello world\n");
+	//myrint();
 	getchar();
 }
