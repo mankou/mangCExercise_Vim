@@ -1,11 +1,21 @@
 # include <stdio.h>
-//# include "Print.c"
-main()
+# define N 4
+int main()
 {
-	void myPrint(void);
-	print("hello world\n");
-/* 	todo è¿™é‡Œæ’å…¥è¯»å…¥æ•°ç»„çš„è¯­å¥ å¹¶è°ƒç”¨simpleInsertå‡½æ•°
+	void simpleInsert(int *a,int n);
+	int a[N]={1,2,9,8};
+	int i;
+	printf("hello world\n");
+/* 	todo ÕâÀï²åÈë¶ÁÈëÊı×éµÄÓï¾ä ²¢µ÷ÓÃsimpleInsertº¯Êı
  */
-	scanf()
-	getchar();
+	simpleInsert(a,N);
+	for(i=0;i<N;i++)
+	{
+		printf("%d ",a[i]);
+	}
+
+
+
+  getchar();
+  return 0;
 }

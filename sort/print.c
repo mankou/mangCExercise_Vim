@@ -2,5 +2,6 @@
 void myPrint(void)
 {
 	printf("haha\n");
+	getchar();
 
 }
