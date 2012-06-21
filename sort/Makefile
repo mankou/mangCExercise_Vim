@@ -1,9 +1,9 @@
-main.exe:main.o simpleInsert.o
-	gcc -Wall -o main.exe main.o simpleInsert.o 
+main.exe:main.o simpleInsertTest.o
+	gcc -Wall -o main.exe main.o simpleInsertTest.o 
 main.o:main.c
 	gcc -Wall -o main.o -c main.c
-simpleInsert.o:simpleInsert.c simpleInsertPass.c
-	gcc -Wall -o simpleInsert.o simpleInsert.c simpleInsertPass.c
+simpleInsertTest.o:simpleInsertTest.c
+	gcc -Wall -o simpleInsertTest.o simpleInsertTest.c
 
 clean:
 	del *.o *.exe
