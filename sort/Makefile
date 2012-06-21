@@ -6,4 +6,4 @@ simpleInsertTest.o:simpleInsertTest.c
 	gcc -Wall -o simpleInsertTest.o simpleInsertTest.c
 
 clean:
-	del *.o *.exe
+	del *.o *.exe *.obj
