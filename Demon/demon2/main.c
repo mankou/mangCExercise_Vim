@@ -1,11 +1,11 @@
 # include <stdio.h>
 //# include "Print.c"
-main()
+int main()
 {
 	void myPrint(void);
-	print("hello world\n");
+	myPrint();
 /* 	todo 这里插入读入数组的语句 并调用simpleInsert函数
  */
-	scanf()
 	getchar();
+	return 0;
 }
