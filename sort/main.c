@@ -1,20 +1,19 @@
 # include <stdio.h>
 //# include "simpleInsertTest.c"
-# define N 4
+# define N 5
 int main()
 {
 	void simpleInsert(int *a,int n);
-	int a[N]={1,2,9,8};
+	int a[N+1]={0,2,9,8,7,1};                       /*todo  */
 	int i;
-	printf("hello world\n");
-/* 	todo 这里插入读入数组的语句 并调用simpleInsert函数
+	printf("simple insert 示例\n");
+/* 	调用simpleInsert()函数
  */
-	simpleInsert(a,N);
-	for(i=0;i<N;i++)
+	simpleInsert(a,N+1);
+	for(i=1;i<N;i++)
 	{
 		printf("%d ",a[i]);
 	}
-
 
 
   getchar();
