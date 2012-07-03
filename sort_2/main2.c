@@ -1,3 +1,27 @@
+# include <stdio.h>
+# define N 5
+int main()
+{
+	void simpleInsert(int *a,int n);
+	int a[N+1]={0,2,9,8,7,1};                       /*a[0]在排序时起监督哨作用，不存储数据 */
+	int i;                                      /* 用于循环数组 */
+	printf("simple insert 示例\n");
+
+/* 	调用simpleInsert()函数
+ */
+	simpleInsert(a,N+1);
+
+
+	for(i=1;i<N;i++)
+	{
+		printf("%d ",a[i]);
+	}
+
+
+  getchar();
+  return 0;
+}
+
 /**功能说明**********
  * 简单插入排序主程序 
  **参数说明***************
@@ -6,8 +30,8 @@
  */
 void simpleInsert(int *a,int n)
 {
-	void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序，即把x插入数组a中，数组a中已经有i个已经排好的记录。 */
 	int i=0;
+    void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序*/
 
 /* 	执行n-1次，
  * 	从a[2]开始插入，因为a[0]用于监督哨，a[1]是排列好的。
@@ -18,7 +42,6 @@ void simpleInsert(int *a,int n)
  */
 		simpleInsertPass(a,i,a[i]);
 	}
-}
 
 /* *功能说明***************************
  * 第i趟排序，即把x插入已经有i个元素的有序序列中，按由小到大的顺序排列
@@ -37,7 +60,7 @@ void simpleInsertPass(int *a,int i,int x)
  *  *  在循环中一边比较一边移动记录。
  *  *
  */
- for(j=i-1;j>=0&&x<a[j];j--)
+// for(j=i-1;j>=0&&x<a[j];j--)
 	for(j=i-1;a[0]<a[j];j--)
 	{
 		a[j+1]=a[j];
@@ -48,3 +71,4 @@ void simpleInsertPass(int *a,int i,int x)
 
 	a[j+1]=a[0];
 }
+

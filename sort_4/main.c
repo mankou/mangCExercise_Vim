@@ -1,5 +1,4 @@
 # include <stdio.h>
-# include "simpleInsertTest.c"
 # define N 5
 int main()
 {
