@@ -6,8 +6,8 @@
  */
 void simpleInsert(int *a,int n)
 {
-	void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序，即把x插入数组a中，数组a中已经有i个已经排好的记录。 */
 	int i=0;
+    void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序*/
 
 /* 	执行n-1次，
  * 	从a[2]开始插入，因为a[0]用于监督哨，a[1]是排列好的。
@@ -19,7 +19,6 @@ void simpleInsert(int *a,int n)
 		simpleInsertPass(a,i,a[i]);
 	}
 }
-
 /* *功能说明***************************
  * 第i趟排序，即把x插入已经有i个元素的有序序列中，按由小到大的顺序排列
  * 数组从0开始记数
@@ -37,7 +36,7 @@ void simpleInsertPass(int *a,int i,int x)
  *  *  在循环中一边比较一边移动记录。
  *  *
  */
- for(j=i-1;j>=0&&x<a[j];j--)
+// for(j=i-1;j>=0&&x<a[j];j--)
 	for(j=i-1;a[0]<a[j];j--)
 	{
 		a[j+1]=a[j];

@@ -6,8 +6,8 @@
  */
 void simpleInsert(int *a,int n)
 {
-	void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序，即把x插入数组a中，数组a中已经有i个已经排好的记录。 */
 	int i=0;
+    void simpleInsertPass(int *a,int x,int i);  /*进行一趟简单插入排序*/
 
 /* 	执行n-1次，
  * 	从a[2]开始插入，因为a[0]用于监督哨，a[1]是排列好的。
