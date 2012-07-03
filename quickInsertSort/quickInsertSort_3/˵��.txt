@@ -1,0 +1,1 @@
+把simpleInsert.c 与simpeInsertPass.c　中的内容纳入simpleInsertTest中。然后在main中include simpleInsertTest.c　然后f5就ok了
