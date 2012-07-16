@@ -1,3 +1,7 @@
+/*
+ * create:23:43 2012-7-16
+ * last modify:23:43 2012-7-16
+ */
 #include <stdio.h>
 #include	<stdlib.h>
 # define N 5                                    /*代表数组记录个数  */

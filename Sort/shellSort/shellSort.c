@@ -1,3 +1,7 @@
+/* 
+ * create:23:43 2012-7-16
+ * last modify:23:43 2012-7-16
+ */
 # include <stdio.h>
 # define outputEveryPass                        /*当宏定义该变量时会输出每一趟排序后的结果，当未宏定义该变量时则不输出每一趟的排序后的结果 */
 /* 
