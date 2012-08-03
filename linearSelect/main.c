@@ -16,16 +16,17 @@ main ( int argc, char *argv[] )
 	int k;
 	int i,m;
 	
-	printf("çº¿æ€§é€‰æ‹©ç¤ºä¾‹\n");
-	printf("è¾“å…¥k");
+	printf("ÏßĞÔÑ¡ÔñÊ¾Àı\n");
+	printf("ÊäÈëk:");
 	scanf("%d",&k);
 
+	printf("Êı×éĞòÁĞÈçÏÂ£º\n");
 	for (i = 0; i < N; i++) {
 		printf("%d ",a[i]);
 	}
 
-	linearSelect(a,0,N-1,k);
-	printf("ç¬¬%då°æ•°ä¸º%d",k,a[m]);
+	m=linearSelect(a,0,N-1,k);
+	printf("\nµÚ%dĞ¡ÊıÎª%d",k,a[m]);
 
 	return EXIT_SUCCESS;
 }				/* ----------  end of function main  ---------- */
