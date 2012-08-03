@@ -1,4 +1,5 @@
 #define N 6
+#define outpurtIntermediate                     /* 是否输b出中间结果 */
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  linearSelect
@@ -10,23 +11,30 @@ linearSelect ( int *a,int h,int e,int k)
 {
 	int m,d;
 	int i;
-//	if(h==e) return h;
-	printf("\n在a[%d]与a[%d]之间找第%d小",h,e,k);
+	if(h==e) return h;
+#ifdef outpurtIntermediate
+	printf("\n在a[%d]与a[%d]之间",h,e);
 	for (i = h; i <= e; i++) {
 		printf("%d ",a[i]);
 	}
+	printf("找第%d小\n",k);
+#endif
+
 	m=quickSortPass(a,h,e);
-	printf("\n");
+
+#ifdef outpurtIntermediate
+	printf("经过一趟快速排序后结果为:\n");
 	for (i = 0; i < N; i++) {
 		printf("%d ",a[i]);
 	}
-	printf("\n此时m=%d\n",m);
+	printf("\n此时quickSortPass返回值m=%d\n",m);
+#endif
+
 	d=m-h+1;
 	if(k==d) {return m;}
-	else if(k<d) linearSelect(a,h,m,k);
-	else if(k>d) linearSelect(a,m+1,e,k-d);
+	else if(k<d) return linearSelect(a,h,m,k);
+	else if(k>d) return linearSelect(a,m+1,e,k-d);
 	
-	return m;
 }		/* -----  end of function linearSelect  ----- */
 
 
