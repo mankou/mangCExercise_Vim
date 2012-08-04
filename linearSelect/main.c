@@ -1,20 +1,24 @@
 
 #include	<stdlib.h>
 #include <stdio.h>
-#define N 6
+#define N 6                                     /* 数组元素个数 */
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  main
- *  Description:  
+ *  Description: 线性选择程序示例的主调函数 
+ *  author:mang
+ *  create:00:16 2012-8-4
+ *  last modify:00:17 2012-8-4
+ *  version:1.0
  * =====================================================================================
  */
 	int
 main ( int argc, char *argv[] )
 {
-	int linearSelect(int *a,int h,int e,int k);
+	int linearSelect(int *a,int h,int e,int k); /* 线性选择函数 */
 	int a[N]={2,5,1,3,7,6};
-	int k;
-	int i,m;
+	int k;                                      /* 线性选择中第k小值 */
+	int i,m;                                    /* 临时变量用于循环或接收函数返回值 */
 	
 	printf("线性选择示例,本程序将帮助您找第k小的值\n");
 	printf("输入k:");
