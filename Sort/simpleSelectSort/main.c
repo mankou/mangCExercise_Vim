@@ -11,17 +11,20 @@
 	int
 main ( int argc, char *argv[] )
 {
+	void simpleSelectSort(int*,int);
+	int i;
 	int a[N]={2,6,3,5,1,4};
+
 	
-	printf("simpleSelectSort ç¤ºä¾‹\n");
-	printf("æ’åºå‰\n");
+	printf("simpleSelectSort Ê¾Àı\n");
+	printf("ÅÅĞòÇ°\n");
 	for (i = 0; i < N; i++) {
-		printf("%d\n",a[i]);
+		printf("%d ",a[i]);
 	}
-	simepleSelectSort(a,N);
-	printf("æ’åºå\n");
+	simpleSelectSort(a,N);
+	printf("ÅÅĞòºó\n");
 	for (i = 0; i < N; i++) {
-		printf("%d\n",a[i]);
+		printf("%d ",a[i]);
 	}
 	return EXIT_SUCCESS;
 }				/* ----------  end of function main  ---------- */
