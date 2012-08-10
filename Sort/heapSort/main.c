@@ -16,15 +16,16 @@
 main ( int argc, char *argv[] )
 {
 	void heapSort(int *,int);
+	int a[N+1]={2,1,5,9,4,3};
 	int i;
 	for (i = 1; i < N; i++) {
 		printf("%d ",a[i]);
 	}
 	
-	heapSort(a,n);
+	heapSort(a,N);
 
 	printf("\n这里倒序输出\n");
-	for ( int i = N; i >= 1; i -= 1 ) {
+	for ( i = N; i >= 1; i -= 1 ) {
 		printf("%d ",a[i]);
 	}
 

@@ -8,7 +8,10 @@
 	void
 heapSort ( int *a,int n)
 {
-	createHeap(int *a,int n);
+	void createHeap(int *a,int n);
+	int i,t;
+
+	createHeap(a,n);
 
 
 	for ( i = n; i >= 1; i -= 1 ) {
@@ -33,7 +36,7 @@ createHeap ( int *a,int n)
 {
 	int i,j,t;
 
-	for ( int i = n/2; i >= 1; i -= 1 ) {       /* 注意这里n/2用到了自动类型转换 */
+	for ( i = n/2; i >= 1; i -= 1 ) {       /* 注意这里n/2用到了自动类型转换 */
 		j=2*i;
 		
 		j=a[j+1]<a[j] ? j+1 : j;
@@ -55,6 +58,9 @@ createHeap ( int *a,int n)
 	void
 sift ( int *a,int k,int m)
 {
+	int j,t,finish;
+
+
 	j=2*k;
 	t=a[k];
 	finish=0;
