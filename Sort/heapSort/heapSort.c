@@ -1,4 +1,4 @@
-
+#define outputEveryPass
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  heapSort
@@ -9,10 +9,16 @@
 heapSort ( int *a,int n)
 {
 	void createHeap(int *a,int n);
+	void sift ( int *a,int k,int m);
 	int i,t;
 
 	createHeap(a,n);
-
+#ifdef outputEveryPass
+	printf("\nÊä³ö½¨¶Ñ½á¹û\n");
+	for (i = 1; i <=n; i++) {
+			printf("%d ",a[i]);
+	}
+#endif
 
 	for ( i = n; i >= 1; i -= 1 ) {
 		t=a[1];a[1]=a[i];a[i]=t;
@@ -35,13 +41,15 @@ heapSort ( int *a,int n)
 createHeap ( int *a,int n)
 {
 	int i,j,t;
-
-	for ( i = n/2; i >= 1; i -= 1 ) {       /* æ³¨æ„è¿™é‡Œn/2ç”¨åˆ°äº†è‡ªåŠ¨ç±»å‹è½¬æ¢ */
+	printf("/nÕâÀïÊä³ön/2%d",n/2);
+	for ( i = n/2; i >= 1; i -= 1 ) {       /* ×¢ÒâÕâÀïn/2ÓÃµ½ÁË×Ô¶¯ÀàĞÍ×ª»» */
 		j=2*i;
 		
-		j=a[j+1]<a[j] ? j+1 : j;
+		if (j+1<=n) {
+			j=a[j+1]<a[j] ? j+1 : j;
+		}
 
-		if(a[i]<a[j]){
+		if(a[i]>a[j]){
 			t=a[i];a[i]=a[j];a[j]=t;
 		}
 	}
@@ -64,7 +72,10 @@ sift ( int *a,int k,int m)
 	j=2*k;
 	t=a[k];
 	finish=0;
-	while (j<=m && !finish) {
+//ÕâÀïÌØÒâĞ´ÔÚj+1<=m ÈÃÄãÃ÷°×ÊÇÒªÅĞ¶Ïj+1ÒªĞ¡ÓÚÏÂ½ç¡£ÔÚÑ­»·ÖĞÈç¹ûÊ¹ÓÃÁËa[j+k]µÄĞÎÊ½£¬Ó¦¸ÃÅĞ¶Ïj+kÊÇ·ñÔ½½ç£¬¶ø²»jÊÇ·ñÔ½½ç
+	while (j+1<=m && !finish) {
+/*ËµÃ÷ÕâÀïÎªÊ²Ã´²»ÓÃÅĞ¶ÏÔ½½ç 
+ */
 		j=a[j+1]<a[j] ? j+1 : j;
 		if (t<a[j]) {
 			finish=1;
@@ -74,6 +85,7 @@ sift ( int *a,int k,int m)
 			k=j;
 			j=2*k;
 		}
+	a[k]=t;
 	}
 	return; 
 }		/* -----  end of function sift  ----- */
