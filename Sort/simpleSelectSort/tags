@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-N	.\main.c	4;"	d	file:
-linearSelect	.\linearSelect.c	/^linearSelect ( int *a,int h,int e,int k)$/;"	f	signature:( int *a,int h,int e,int k)
+N	.\main.c	3;"	d	file:
 main	.\main.c	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
-quickSortPass	.\linearSelect.c	/^quickSortPass ( int *a,int h,int e)$/;"	f	signature:( int *a,int h,int e)
+simpleSelectSort	.\simpleSelectSort.c	/^simpleSelectSort (int *a,int n)$/;"	f	signature:(int *a,int n)
+simpleSelectSortPass	.\simpleSelectSort.c	/^simpleSelectSortPass (int *a,int i,int n)$/;"	f	signature:(int *a,int i,int n)
