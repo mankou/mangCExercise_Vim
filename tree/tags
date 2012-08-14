@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BinaryTree	.\binaryTree.h	/^typedef struct binaryTree BinaryTree;$/;"	t	typeref:struct:binaryTree
+N	.\main.c	5;"	d	file:
+TREE_TYPE	.\binaryTree.h	1;"	d
+binaryTree	.\binaryTree.h	/^struct binaryTree {$/;"	s
+binaryTree::left	.\binaryTree.h	/^	struct biaryTree * left;$/;"	m	struct:binaryTree	typeref:struct:binaryTree::biaryTree	access:public
+binaryTree::right	.\binaryTree.h	/^	struct biaryTree * right;$/;"	m	struct:binaryTree	typeref:struct:binaryTree::biaryTree	access:public
+binaryTree::value	.\binaryTree.h	/^	TREE_TYPE value;$/;"	m	struct:binaryTree	access:public
+find	.\binaryTree.h	/^BinaryTree *find();$/;"	p	signature:()
+inOrderTraverse	.\binarySearchTree.c	/^inOrderTraverse ( BinaryTree * root)$/;"	f	signature:( BinaryTree * root)
+inOrderTraverse	.\binaryTree.h	/^void inOrderTraverse(BinaryTree *);$/;"	p	signature:(BinaryTree *)
+insert	.\binarySearchTree.c	/^insert (BinaryTree **current,TREE_TYPE value)$/;"	f	signature:(BinaryTree **current,TREE_TYPE value)
+insert	.\binaryTree.h	/^void insert(BinaryTree **current,TREE_TYPE value);$/;"	p	signature:(BinaryTree **current,TREE_TYPE value)
+left	.\binaryTree.h	/^	struct biaryTree * left;$/;"	m	struct:binaryTree	typeref:struct:binaryTree::biaryTree	access:public
+main	.\main.c	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
+right	.\binaryTree.h	/^	struct biaryTree * right;$/;"	m	struct:binaryTree	typeref:struct:binaryTree::biaryTree	access:public
+value	.\binaryTree.h	/^	TREE_TYPE value;$/;"	m	struct:binaryTree	access:public
