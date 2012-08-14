@@ -10,7 +10,7 @@ typedef struct binaryTree BinaryTree;
 void insert(BinaryTree **current,TREE_TYPE value);
 
 
-BinaryTree *find();
+BinaryTree *find(BinaryTree * tree,TREE_TYPE value );
 
 
 void inOrderTraverse(BinaryTree *);
