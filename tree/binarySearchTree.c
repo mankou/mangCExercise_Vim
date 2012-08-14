@@ -19,11 +19,16 @@ insert (BinaryTree **current,TREE_TYPE value)
 {
 	if (*current==NULL) {
 		*current=(BinaryTree*)malloc(sizeof(BinaryTree));
-//这里加入创建不合适判断的语句	
-		
-		(*current)->value=value;
-		(*current)->left=NULL;
-		(*current)->right=NULL;
+		if(*current!=NULL){
+			(*current)->value=value;
+			(*current)->left=NULL;
+			(*current)->right=NULL;
+		}
+		else {
+			printf("分配内存错误\n");
+			exit(0);
+		}
+
 
 	}
 	else if(value>(*current)->value){
