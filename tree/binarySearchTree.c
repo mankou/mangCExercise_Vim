@@ -5,10 +5,11 @@
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  insert
- *  Description:  
- *  Parameter:
- *  Create:
- *  Lastmodify:
+ *  Description:  向二叉搜索树中插入一个值。
+ *  Parameter:　BinaryTree **current 　current指向　树指针的指针
+ *              TREE_TYPE value 要插入的值
+ *  Create:12:25 2012-8-14
+ *  Lastmodify:12:25 2012-8-14
  *  Author: 	　mang
  *  Version:    　1.0
  * =====================================================================================
@@ -18,7 +19,8 @@ insert (BinaryTree **current,TREE_TYPE value)
 {
 	if (*current==NULL) {
 		*current=(BinaryTree*)malloc(sizeof(BinaryTree));
-//这里加入创建不合适判断的语句		
+//这里加入创建不合适判断的语句	
+		
 		(*current)->value=value;
 		(*current)->left=NULL;
 		(*current)->right=NULL;
