@@ -7,3 +7,4 @@
 N	.\main.c	3;"	d	file:
 main	.\main.c	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
 strcpy	.\mangString.c	/^strcpy (char * dst,char const *src)$/;"	f	signature:(char * dst,char const *src)
+strlen	.\mangString.c	/^strlen ( char const * src )$/;"	f	signature:( char const * src )

@@ -30,7 +30,7 @@ main ( int argc, char *argv[] )
 /*
  * 注意在使用strcpy()函数之前先判断目标数组是否可能容纳下源数组
  */
-	if (N-1=strlen(src)) {
+	if (N-1==strlen(src)) {
 		strcpy(dst,src);
 		printf("%s\n",dst);
 	}
@@ -40,12 +40,21 @@ main ( int argc, char *argv[] )
 
 	printf("\ndst字符数组的长度为:%d\n",strlen(dst));
 
-	if (strlen(a1)-strlen(a2)>0) {
+/*
+ * 经典错误说明:无符号数参与的运算
+ * 因strlen 返回值为无符号数，无符号数永远是大于0的
+ * 另外：有符号数与符号数进行算术运算，结果是无符号的。
+ */
+	if ((int)strlen(a1)-(int)strlen(a2)>0) {
 		printf("a1>a2\n");
 	}
 	else {
 		printf("a1<a2\n");
 	}
+
+
+	strcat(dst,"link");
+	printf("%s\n",dst);
 
 	return EXIT_SUCCESS;
 }				/* ----------  end of function main  ---------- */

@@ -25,10 +25,10 @@ strcpy (char * dst,char const *src)
 /* 
  * ===  FUNCTION  ======================================================================
  *         Name:  strlen
- *  Description:  
- *  Parameter:
- *  Create:
- *  Lastmodify:
+ *  Description: 求字符串的长度
+ *  Parameter:char const *src 指向字符串
+ *  Create:23:25 2012-8-18
+ *  Lastmodify:23:26 2012-8-18
  *  Author: 	　mang
  *  Version:    　1.0
  * =====================================================================================
@@ -42,3 +42,28 @@ strlen ( char const * src )
 	}
 	return count;
 }		/* -----  end of function strlen  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  strcat
+ *  Description:  自己写的连接字符串的函数
+ *  Parameter: char * dst 指向目标字符串
+ *             char const *src 指向源字符串
+ *  Create:23:30 2012-8-18
+ *  Lastmodify:23:30 2012-8-18
+ *  Author: 	　mang
+ *  Version:    　1.0
+ * =====================================================================================
+ */
+	void
+strcat ( char * dst,char const * src)
+{
+	char *tmp=dst;
+	while(*dst++)
+		;
+
+	while(*dst++=*src++)
+		;
+	return tmp;
+}		/* -----  end of function strcat  ----- */
