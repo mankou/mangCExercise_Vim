@@ -16,9 +16,25 @@
 	char *	
 strcpy (char * dst,char const *src)
 {
+/*
+ * 注意3点 
+ * 一 目标字符串指针备份
+ * 二 目标字符串最后一个字符是\0.这点非常隐秘，因为在while循环中 是先复制 再加1 所以先复制了\0 然后一判断为空，所以循环就结束了。
+ * 三 复制结束的标识是 *src==NULL
+ */
 	char *tmp=dst;
 	while(*dst++ = *src++);
+
 	return tmp;
+/*
+ * char *tmp=dst;
+ * while(*src!=\0)
+ * {
+ *   *dst++=*src++;
+ * }
+ * *dst=\0;
+ * return tmp;
+ */
 }		/* -----  end of function strcmp  ----- */
 
 
