@@ -72,7 +72,7 @@ strlen ( char const * src )
  *  Version:    　1.0
  * =====================================================================================
  */
-	void
+	char*	
 strcat ( char * dst,char const * src)
 {
 	char *tmp=dst;
@@ -83,3 +83,28 @@ strcat ( char * dst,char const * src)
 		;
 	return tmp;
 }		/* -----  end of function strcat  ----- */
+
+
+/* 
+ * ===  FUNCTION  ======================================================================
+ *         Name:  strcmp
+ *  Description:  自己写的字符串比较函数
+ *  Parameter: char *dst 指向目标字符串
+ *             char *src 指向源字符串
+ *  Create:17:51 2012-9-4
+ *  Lastmodify:17:51 2012-9-4
+ *  Author: 	　mang
+ *  Version:    　1.0
+ * =====================================================================================
+ */
+	int
+strcmp ( char *dst,char *src)
+{
+	int result;
+	while(*dst && *src && *dst==*src){
+		dst++;
+		src++;
+	}
+	result=*dst-*src;
+	return result;
+}		/* -----  end of function strcmp  ----- */
