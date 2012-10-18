@@ -25,7 +25,10 @@ main()
 
 
 }
-
+/* 
+ * 功能：二分查找
+ * 说明：来自算法书28页。书中说很少有人能写对二分查找
+ */
 int binarySearch(int *a,int n,int k)
 {
 	int f,r,m;
