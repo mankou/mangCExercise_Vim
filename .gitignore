@@ -1,0 +1,7 @@
+/linearSelect/*.swp
+/linearSelect/*.o
+/linearSelect/*.exe
+*.exe
+*.o
+*.swp
+*.obj
